@@ -1,12 +1,12 @@
 //Importa
 const express = require('express')
 const bodyParser = require('body-parser')
-
+const cors = require("cors")
 //Instancia do Express
 const app = express()
 //Adicioinando bodyParser ao express
 app.use(bodyParser.json())
-
+app.use(cors())
 //Configurar a porta da API
 const port = 3000
 app.listen(port, () => {
